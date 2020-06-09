@@ -1,9 +1,12 @@
-import { serve } from "https://deno.land/std/http/server.ts"
+import { Application } from 'https://deno.land/x/oak/mod.ts'
+import { APP_HOST, APP_PORT } from './config.ts'
+import router from './routing.ts'
 
-const port: number = 8888
+const app = new Application()
 
-const server = serve({ port })
-console.log('http://localhost:8888')
-for await (const req of server) {
-  req.respond({body: "Hello, Deno🦖?!!\n"})
-}
+app.use(router.routes())
+app.use(router.allowedMethods())
+
+console.log(`Listening on ${ APP_PORT }...`)
+
+await app.listen(`${ APP_HOST }:${ APP_PORT }`)
