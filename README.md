@@ -17,6 +17,6 @@ error: Uncaught PermissionDenied: network access to "0.0.0.0:8888", run again wi
 ```
 
 ```bash
-$ deno run --allow-net  index.ts
-http://localhost:8888
+$ deno run --allow-env --allow-net index.ts
+Listening on 8888...
 ```
