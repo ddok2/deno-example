@@ -1,6 +1,11 @@
 # deno-example
 
 ```
+$ deno eval 'console.log(`Hello, ${[..."node"].sort().join("")}<0001f996>?!!!`)'
+Hello, deno🦖?!!!
+```
+
+```
 $ deno run index.ts
 error: Uncaught PermissionDenied: network access to "0.0.0.0:8888", run again with the --allow-net flag
     at unwrapResponse ($deno$/ops/dispatch_json.ts:43:11)
