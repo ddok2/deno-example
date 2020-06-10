@@ -23,7 +23,6 @@ const createUser = async (userData: UserData): Promise<string> => {
 
 const getUsers = async (): Promise<User[]> => {
   const users = await fetchData()
-
   return users.sort((a, b) => a.name.localeCompare(b.name))
 }
 

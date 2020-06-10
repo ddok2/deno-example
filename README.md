@@ -16,7 +16,18 @@ error: Uncaught PermissionDenied: network access to "0.0.0.0:8888", run again wi
     at file:///Users/sung/Development/02.study/deno/deno-example/index.ts:5:16
 ```
 
+## Run
+
 ```bash
-$ deno run --allow-env --allow-net index.ts
-Listening on 8888...
+deno run --allow-env --allow-net --allow-read index.ts
+Compile file:///Users/sung/Development/02.study/deno/deno-example/index.ts
+Listening on localhost:8888...
+```
+
+### OR Using -A Option
+
+```bash
+deno run -A index.ts
+Compile file:///Users/sung/Development/02.study/deno/deno-example/index.ts
+Listening on localhost:8888...
 ```

@@ -2,8 +2,17 @@ import { DB_PATH } from '../config.ts'
 import { User } from '../models/user.ts'
 
 export const fetchData = async (): Promise<User[]> => {
-  const data: Uint8Array = await Deno.readFile(DB_PATH)
+  let data: Uint8Array;
+  try {
+    data = await Deno.readFile(DB_PATH)
+  } catch (e) {
+    console.error(e)
+    throw e
+  }
 
+  if (!data) {
+    return []
+  }
   const decoder = new TextDecoder()
   const decodedData = decoder.decode(data)
 
