@@ -2,7 +2,8 @@
 <img src="https://kirlovon.github.io/Deno-Logo/Exported/SVG/Deno-Blue-1.svg" width="120" height="120">
 
 
-# deno-api-example   ![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)
+# deno-api-example   
+[![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
 Example of a small API build with Deno and Oak
 
